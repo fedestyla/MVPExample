@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.+'
+    compile 'io.reactivex:rxjava:1.0.7'
+    compile 'io.reactivex:rxandroid:0.24.0'
+    compile 'org.mockito:mockito-core:2.0.5-beta'
+    compile 'org.easytesting:fest-assert:1.4'
+}
+
+test {
+    testLogging {
+        showStandardStreams = true
+        showStackTraces = true
+        exceptionFormat = "full"
+    }
+}
